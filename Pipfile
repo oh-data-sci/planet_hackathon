@@ -1,0 +1,26 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+jupyterlab = "*"
+sklearn = "*"
+rasterio = "*"
+matplotlib = "*"
+seaborn = "*"
+geopandas = "*"
+geojsonio = "*"
+fiona = "*"
+jq = "*"
+requests = "*"
+retrying = "*"
+planet = "*"
+fastkml = "*"
+lxml = "*"
+geojson = "*"
+
+[requires]
+python_version = "3.8"

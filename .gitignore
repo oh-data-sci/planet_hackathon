@@ -1,0 +1,6 @@
+.ipynb_checkpoints/
+data/
+secret.txt
+.DS_Store
+planet_notebooks
+downloaded/
