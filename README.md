@@ -23,6 +23,9 @@ we tried to:
 # files included
 data files are excluded from this repository. 
 
+- `first_exploration.ipynb` reads and parses locations from the included `kml` files.
+- `download_aoi_from_geojson.ipynb` reads the a geojson file containing the area of interest polygon and converts to query to planet.com api.
+- 
 # lessons learned
 
 - `fastkml` is not a good way to read and extract data from `kml` files, use `elementree` and treat like `xml` instead.
