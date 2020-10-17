@@ -10,22 +10,31 @@ we had at the start a couple of [geospatial information files](https://www.dropb
 
 we tried to:
 
-- fetch multband satellite imagery via the planet.com api:
+- fetch multiband satellite imagery via the planet.com api:
 	- limit the data volume and optimise download speeds by using clipping
-	- only images within the area of interest
+	- only images within the area of interest 
+	- then reduce the area of interest to cut down data volumes and processing times 
 	- only images with clear skies
-	- only one image per 2 weeks
-	- should cover the area of interest
-	- should range from october (when wells should be full) through may (the driest period)
-- compute, for the images the pixel ndwi (a "water index" based on ratio of near infrared and green channel)
-- find a sensible threshold value, filter spots with a high ndwi, and count their area.
+	- ~~only one image per 2 weeks~~
+	- collect from october 2019 (when wells should be full) through may 2020 (the driest period of the year)
+- compute, for the images the pixel ndwi 
+	+ ndwi: a "water index" based on ratio of difference between near infrared and green channel and their sum, 
+	+ ndwi: like ndvi, but substitute red and green: (green - ir)/(green+ir)
+
+
+- find a sensible threshold ndwi value
+- filter spots with a high ndwi, 
+- and count their area for each image
+- track the water area over time. 
+- mark the date when >50% of wells are dry.
 
 # files included
 data files are excluded from this repository. 
 
 - `first_exploration.ipynb` reads and parses locations from the included `kml` files.
 - `download_aoi_from_geojson.ipynb` reads the a geojson file containing the area of interest polygon and converts to query to planet.com api.
-- 
+-  `rasterio_testing.ipynb` playing with pixel values to compute ndwi.
+
 # lessons learned
 
 - `fastkml` is not a good way to read and extract data from `kml` files, use `elementree` and treat like `xml` instead.
@@ -40,3 +49,4 @@ data files are excluded from this repository.
 	    + get location url from asset
 	    + run the download asset function.
 - clipping the data is nontrivial. the clipping requires the `order` endpoint which is out of scope of this hackathon (we were not given access).
+
