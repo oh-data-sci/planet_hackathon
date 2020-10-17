@@ -7,6 +7,7 @@ we had at the start a couple of [geospatial information files](https://www.dropb
 
 - polygon delimiting an area of interest (pabal village in central india).
 - locations of 257 wells within that polygon (collected at the ground from the edge of the well)
+- final [presentation] (https://docs.google.com/presentation/d/1k5Zsr0MKK5Es7j35ajb5oxdabc-76uTZZiz0ez46AGc/edit?usp=sharing)
 
 we tried to:
 
