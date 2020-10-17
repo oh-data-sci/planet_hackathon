@@ -39,4 +39,4 @@ data files are excluded from this repository.
 	    + await activation to complete
 	    + get location url from asset
 	    + run the download asset function.
-- clipping the data is nontrivial. the 
+- clipping the data is nontrivial. the clipping requires the `order` endpoint which is out of scope of this hackathon (we were not given access).
